@@ -1,0 +1,1 @@
+python -m PyInstaller --onefile --noconsole  software/main.py --name FruitAnimalGenerator.exe --icon resources/icon.ico --clean
