@@ -15,6 +15,8 @@ class GeneratorWidget(QWidget):
 
         self.ui.generate_button.clicked.connect(self.generate_fruit_animal)
 
+        self.generate_fruit_animal()
+
     def generate_fruit_animal(self):
         no_fruits = self.app_data.fruits.empty()
         no_animals = self.app_data.animals.empty()

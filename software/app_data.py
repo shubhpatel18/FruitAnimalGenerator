@@ -1,12 +1,16 @@
+import os
 import random
 
-FRUITS_FILE_PATH = 'software/data/fruits.txt'
-ANIMALS_FILE_PATH = 'software/data/animals.txt'
+DATA_DIR_PATH = 'data'
+FRUITS_FILE_PATH = f'{DATA_DIR_PATH}/fruits.txt'
+ANIMALS_FILE_PATH = f'{DATA_DIR_PATH}/animals.txt'
 
 class FileBackedSet:
     def __init__(self, file_path: str):
         self.file_path = file_path
         self.data = set()
+
+        os.makedirs(DATA_DIR_PATH, exist_ok=True)
 
         try:
             with open(self.file_path, 'r') as file:
